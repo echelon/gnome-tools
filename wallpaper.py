@@ -16,7 +16,6 @@ from xml.etree.ElementTree import ElementTree
 import gconf
 import random
 import os.path
-import sys
 
 GNOME_WALLPAPER_FILE = '~/.gnome2/backgrounds.xml'
 
@@ -132,4 +131,3 @@ def main():
 
 if __name__ == '__main__':
 	main()
-	sys.exit(0)
