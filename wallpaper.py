@@ -4,12 +4,19 @@ Switch Wallpaper Randomly
 
 Reads the ~/.gnome2/backgrounds.xml file to allow user management
 of wallpaper configs under Gnome's Appearance Preferences dialog.
+
+Setting a crontab requires that the DISPLAY environment variable is 
+set, eg.
+
+DISPLAY=:0.0
+*/10 * * * * dev/gnome-tools/wallpaper.py
 """
 
 from xml.etree.ElementTree import ElementTree
 import gconf
 import random
 import os.path
+import sys
 
 GNOME_WALLPAPER_FILE = '~/.gnome2/backgrounds.xml'
 
@@ -125,3 +132,4 @@ def main():
 
 if __name__ == '__main__':
 	main()
+	sys.exit(0)
