@@ -117,6 +117,7 @@ def setRandomWallpaper(wallpapers=None):
 
 	# Set random wallpaper as the current one
 	# TODO: Don't allow current wallpaper in selection.
+	print "Selecting random wallpaper from %d choices." % len(wallpapers)
 	random.choice(wallpapers).switchTo()
 
 def main():
